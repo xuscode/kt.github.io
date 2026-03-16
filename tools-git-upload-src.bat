@@ -18,7 +18,7 @@ git add .
 ::set /p GetYourLog=
 rem git commit -m "%date%"
 git commit -m "%date%  %time%"
-git push -u origin main
+git push -u origin master
 timeout /t 20
 
 @REM cd /d .\files\BDG_CASE_WUHAN_CENTER
