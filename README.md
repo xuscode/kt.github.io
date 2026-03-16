@@ -1,1 +1,2 @@
-"# kt.github.io" 
+
+[](https://king-tu.com)
