@@ -3,10 +3,297 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的页面</title>
+    <title>经图科技 - 有限元分析专家</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 20px;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: #3498db;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .construction-notice {
+            background-color: #fff3cd;
+            border: 1px solid #ffeaa7;
+            color: #856404;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        .cases-section {
+            padding: 60px 0;
+            background-color: white;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 40px;
+            color: #2c3e50;
+        }
+        
+        .cases-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .case-card {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .case-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+        
+        .case-card h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+        
+        .case-card p {
+            margin-bottom: 20px;
+            color: #666;
+        }
+        
+        .case-tag {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+        
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+        
+        .footer-section {
+            flex: 1;
+            min-width: 200px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        
+        .footer-section p, .footer-section a {
+            color: #bdc3c7;
+            text-decoration: none;
+            line-height: 1.8;
+        }
+        
+        .footer-section a:hover {
+            color: #3498db;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid #34495e;
+            padding-top: 20px;
+            font-size: 14px;
+            color: #bdc3c7;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .hero p {
+                font-size: 18px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello, GitHub Pages!</h1>
-    <p>这是最简单的 GitHub Pages 页面</p>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">经图科技</div>
+                <ul class="nav-links">
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">关于我们</a></li>
+                    <li><a href="#">有限元分析</a></li>
+                    <li><a href="#">案例展示</a></li>
+                    <li><a href="#">联系我们</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="container">
+            <h1>经图科技</h1>
+            <p>专业的有限元分析解决方案提供商</p>
+        </div>
+    </section>
+    
+    <div class="container">
+        <div class="construction-notice">
+            网站正在建设中，很快就呈现在您的面前
+        </div>
+        
+        <section class="cases-section">
+            <h2 class="section-title">有限元分析案例</h2>
+            <div class="cases-grid">
+                <div class="case-card">
+                    <h3>机械结构强度分析</h3>
+                    <p>对复杂机械结构进行强度和刚度分析，确保产品在各种工况下的安全性和可靠性。</p>
+                    <span class="case-tag">结构分析</span>
+                    <span class="case-tag">强度评估</span>
+                </div>
+                <div class="case-card">
+                    <h3>热传导分析</h3>
+                    <p>模拟分析材料在不同温度环境下的热传导特性，优化产品散热设计。</p>
+                    <span class="case-tag">热分析</span>
+                    <span class="case-tag">散热优化</span>
+                </div>
+                <div class="case-card">
+                    <h3>流体动力学分析</h3>
+                    <p>通过CFD模拟分析流体流动特性，优化产品设计，提高性能和效率。</p>
+                    <span class="case-tag">流体分析</span>
+                    <span class="case-tag">CFD模拟</span>
+                </div>
+                <div class="case-card">
+                    <h3>振动分析</h3>
+                    <p>分析结构在动态载荷下的振动特性，避免共振，提高产品稳定性。</p>
+                    <span class="case-tag">振动分析</span>
+                    <span class="case-tag">模态分析</span>
+                </div>
+                <div class="case-card">
+                    <h3>疲劳寿命预测</h3>
+                    <p>通过有限元分析预测产品在循环载荷下的疲劳寿命，提高产品可靠性。</p>
+                    <span class="case-tag">疲劳分析</span>
+                    <span class="case-tag">寿命预测</span>
+                </div>
+                <div class="case-card">
+                    <h3>多物理场耦合分析</h3>
+                    <p>综合分析结构、热、流体等多物理场相互作用，提供全面的解决方案。</p>
+                    <span class="case-tag">多物理场</span>
+                    <span class="case-tag">耦合分析</span>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>经图科技</h3>
+                    <p>专业的有限元分析解决方案提供商</p>
+                </div>
+                <div class="footer-section">
+                    <h3>联系我们</h3>
+                    <p>电话: 400-123-4567</p>
+                    <p>邮箱: info@jingtutech.com</p>
+                </div>
+                <div class="footer-section">
+                    <h3>服务领域</h3>
+                    <p><a href="#">结构分析</a></p>
+                    <p><a href="#">热分析</a></p>
+                    <p><a href="#">流体分析</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 经图科技 版权所有</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
