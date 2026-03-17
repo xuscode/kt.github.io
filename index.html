@@ -1,299 +1,1669 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>经图科技</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Microsoft YaHei', Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f5f5f5;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        header {
-            background-color: #2c3e50;
-            color: white;
-            padding: 20px 0;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-        }
-        
-        .nav-links {
-            display: flex;
-            list-style: none;
-        }
-        
-        .nav-links li {
-            margin-left: 20px;
-        }
-        
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        
-        .nav-links a:hover {
-            color: #3498db;
-        }
-        
-        .hero {
-            background: linear-gradient(135deg, #3498db, #2980b9);
-            color: white;
-            padding: 100px 0;
-            text-align: center;
-        }
-        
-        .hero h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-        }
-        
-        .hero p {
-            font-size: 20px;
-            margin-bottom: 30px;
-        }
-        
-        .construction-notice {
-            background-color: #fff3cd;
-            border: 1px solid #ffeaa7;
-            color: #856404;
-            padding: 20px;
-            margin: 30px 0;
-            border-radius: 5px;
-            text-align: center;
-            font-size: 18px;
-            font-weight: bold;
-        }
-        
-        .cases-section {
-            padding: 60px 0;
-            background-color: white;
-        }
-        
-        .section-title {
-            text-align: center;
-            font-size: 36px;
-            margin-bottom: 40px;
-            color: #2c3e50;
-        }
-        
-        .cases-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        
-        .case-card {
-            background-color: #f9f9f9;
-            border-radius: 8px;
-            padding: 25px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .case-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
-        }
-        
-        .case-card h3 {
-            font-size: 20px;
-            margin-bottom: 15px;
-            color: #2c3e50;
-        }
-        
-        .case-card p {
-            margin-bottom: 20px;
-            color: #666;
-        }
-        
-        .case-tag {
-            display: inline-block;
-            background-color: #3498db;
-            color: white;
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 14px;
-            margin-right: 10px;
-            margin-bottom: 10px;
-        }
-        
-        footer {
-            background-color: #2c3e50;
-            color: white;
-            padding: 40px 0;
-            text-align: center;
-        }
-        
-        .footer-content {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            margin-bottom: 30px;
-        }
-        
-        .footer-section {
-            flex: 1;
-            min-width: 200px;
-            margin-bottom: 20px;
-        }
-        
-        .footer-section h3 {
-            margin-bottom: 15px;
-            font-size: 18px;
-        }
-        
-        .footer-section p, .footer-section a {
-            color: #bdc3c7;
-            text-decoration: none;
-            line-height: 1.8;
-        }
-        
-        .footer-section a:hover {
-            color: #3498db;
-        }
-        
-        .footer-bottom {
-            border-top: 1px solid #34495e;
-            padding-top: 20px;
-            font-size: 14px;
-            color: #bdc3c7;
-        }
-        
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-            
-            .hero h1 {
-                font-size: 36px;
-            }
-            
-            .hero p {
-                font-size: 18px;
-            }
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>KINGTU - Ansys软件服务专家</title>
+  <meta name="description" content="KINGTU专注于Ansys软件服务，提供有限元分析、仿真模拟、技术支持等全方位解决方案">
+  <meta name="keywords" content="KINGTU, Ansys, 有限元分析, 仿真模拟, 工程仿真, CAE">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Instant
+  * Template URL: https://bootstrapmade.com/newtemplate-bootstrap-website-template/
+  * Updated: Jul 07 2025 with Bootstrap v5.3.7
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
 </head>
-<body>
-    <header>
-        <div class="container">
-            <nav>
-                <div class="logo">经图科技</div>
-                <ul class="nav-links">
-                    <li><a href="#">首页</a></li>
-                    <li><a href="#">关于我们</a></li>
-                    <li><a href="#">有限元分析</a></li>
-                    <li><a href="#">案例展示</a></li>
-                    <li><a href="#">联系我们</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    
-    <section class="hero">
-        <div class="container">
-            <h1>经图科技</h1>
-            <p>专业的有限元分析解决方案提供商</p>
-        </div>
-    </section>
-    
-    <div class="container">
-        <div class="construction-notice">
-            网站正在建设中，很快就呈现在您的面前
-        </div>
-        
-        <section class="cases-section">
-            <h2 class="section-title">有限元分析案例</h2>
-            <div class="cases-grid">
-                <div class="case-card">
-                    <h3>机械结构强度分析</h3>
-                    <p>对复杂机械结构进行强度和刚度分析，确保产品在各种工况下的安全性和可靠性。</p>
-                    <span class="case-tag">结构分析</span>
-                    <span class="case-tag">强度评估</span>
-                </div>
-                <div class="case-card">
-                    <h3>热传导分析</h3>
-                    <p>模拟分析材料在不同温度环境下的热传导特性，优化产品散热设计。</p>
-                    <span class="case-tag">热分析</span>
-                    <span class="case-tag">散热优化</span>
-                </div>
-                <div class="case-card">
-                    <h3>流体动力学分析</h3>
-                    <p>通过CFD模拟分析流体流动特性，优化产品设计，提高性能和效率。</p>
-                    <span class="case-tag">流体分析</span>
-                    <span class="case-tag">CFD模拟</span>
-                </div>
-                <div class="case-card">
-                    <h3>振动分析</h3>
-                    <p>分析结构在动态载荷下的振动特性，避免共振，提高产品稳定性。</p>
-                    <span class="case-tag">振动分析</span>
-                    <span class="case-tag">模态分析</span>
-                </div>
-                <div class="case-card">
-                    <h3>疲劳寿命预测</h3>
-                    <p>通过有限元分析预测产品在循环载荷下的疲劳寿命，提高产品可靠性。</p>
-                    <span class="case-tag">疲劳分析</span>
-                    <span class="case-tag">寿命预测</span>
-                </div>
-                <div class="case-card">
-                    <h3>多物理场耦合分析</h3>
-                    <p>综合分析结构、热、流体等多物理场相互作用，提供全面的解决方案。</p>
-                    <span class="case-tag">多物理场</span>
-                    <span class="case-tag">耦合分析</span>
-                </div>
-            </div>
-        </section>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.webp" alt=""> -->
+        <h1 class="sitename">KINGTU</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" class="active">首页</a></li>
+          <li><a href="#about">关于我们</a></li>
+          <li><a href="#features">软件功能</a></li>
+          <li><a href="#services">服务项目</a></li>
+          <li><a href="#pricing">价格方案</a></li>
+          <li class="dropdown"><a href="#"><span>解决方案</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#">结构分析</a></li>
+              <li><a href="#">流体分析</a></li>
+              <li><a href="#">热分析</a></li>
+              <li><a href="#">电磁分析</a></li>
+              <li><a href="#">多物理场耦合</a></li>
+            </ul>
+          </li>
+          <li><a href="#contact">联系我们</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="index.html#about">了解更多</a>
+
     </div>
-    
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>经图科技</h3>
-                    <p>专业的有限元分析解决方案提供商</p>
-                </div>
-                <div class="footer-section">
-                    <h3>联系我们</h3>
-                    <p>电话: 400-123-4567</p>
-                    <p>邮箱: maggie@king-tu.com</p>
-                </div>
-                <div class="footer-section">
-                    <h3>服务领域</h3>
-                    <p><a href="#">结构分析</a></p>
-                    <p><a href="#">热分析</a></p>
-                    <p><a href="#">流体分析</a></p>
-                </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
+      <div class="container">
+        <div class="hero-wrapper">
+
+          <div class="hero-main-content text-center">
+            <h1 class="hero-title" data-aos="zoom-in" data-aos-delay="200">
+              专业Ansys软件服务<br>
+              <span class="typed" data-typed-items="有限元分析,工程仿真,技术支持"></span>
+            </h1>
+
+            <p class="hero-description" data-aos="fade-up" data-aos-delay="300">
+              KINGTU专注于Ansys软件服务，为企业提供专业的有限元分析、仿真模拟和技术支持，助力工程创新与产品研发。
+            </p>
+
+            <div class="hero-actions" data-aos="fade-up" data-aos-delay="400">
+              <a href="#" class="action-btn primary">
+                <span>了解服务详情</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+              <a href="#" class="action-btn secondary glightbox">
+                <i class="bi bi-play-circle"></i>
+                <span>观看演示视频</span>
+              </a>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 经图科技 版权所有</p>
+
+            <div class="hero-image-showcase" data-aos="fade-up" data-aos-delay="500">
+              <div class="image-wrapper">
+                <img src="assets/img/about/about-18.webp" class="img-fluid" alt="Strategic Overview">
+                <div class="floating-card card-1" data-aos="fade-right" data-aos-delay="600">
+                  <div class="card-content">
+                    <div class="card-icon">
+                      <i class="bi bi-graph-up-arrow"></i>
+                    </div>
+                    <div class="card-info">
+                      <h4><span data-purecounter-start="0" data-purecounter-end="89" class="purecounter"></span>%</h4>
+                      <p>Success Benchmark</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="floating-card card-2" data-aos="fade-left" data-aos-delay="700">
+                  <div class="card-content">
+                    <div class="card-icon">
+                      <i class="bi bi-people"></i>
+                    </div>
+                    <div class="card-info">
+                      <h4><span data-purecounter-start="0" data-purecounter-end="500" class="purecounter"></span>+</h4>
+                      <p>Satisfied Clients</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+
+          </div>
+
         </div>
-    </footer>
+      </div>
+    </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row align-items-center justify-content-between g-lg-5">
+          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
+            <div class="image-wrapper">
+              <img src="assets/img/about/about-portrait-7.webp" class="img-fluid rounded" alt="About Us Image">
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
+            <div class="content">
+              <h2 class="mb-4">关于KINGTU</h2>
+              <h5 class="mb-4">专业Ansys软件服务提供商</h5>
+
+              <p>KINGTU成立于2010年，专注于Ansys软件服务，为企业提供专业的有限元分析、仿真模拟和技术支持。我们拥有一支经验丰富的技术团队，致力于为客户提供高质量的工程仿真解决方案。</p>
+
+              <div class="features-list mt-5" data-aos="fade-up" data-aos-delay="400">
+                <div class="row g-4">
+                  <div class="col-md-6">
+                    <div class="feature-item">
+                      <i class="bi bi-award"></i>
+                      <h5>专业服务</h5>
+                      <p>拥有多年Ansys软件应用经验，提供专业技术支持。</p>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="feature-item">
+                      <i class="bi bi-lightbulb"></i>
+                      <h5>创新解决方案</h5>
+                      <p>为客户提供定制化的工程仿真解决方案。</p>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="feature-item">
+                      <i class="bi bi-people"></i>
+                      <h5>客户至上</h5>
+                      <p>以客户需求为中心，提供优质的技术服务。</p>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="feature-item">
+                      <i class="bi bi-graph-up-arrow"></i>
+                      <h5>持续发展</h5>
+                      <p>不断提升技术能力，为客户创造更大价值。</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-5" data-aos="fade-up" data-aos-delay="600">
+                <a href="#" class="btn btn-primary me-3">了解更多</a>
+                <a href="#" class="btn btn-outline-primary">联系我们</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+
+    <!-- Features Section -->
+    <section id="features" class="features section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Ansys软件功能</h2>
+        <p>强大的工程仿真能力，为您的产品研发提供全面支持</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row align-items-center mb-5">
+          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="150">
+            <div class="intro-content">
+              <h2>强大的Ansys软件功能</h2>
+              <p>Ansys提供全面的工程仿真解决方案，涵盖结构、流体、热、电磁等多个物理领域，帮助工程师优化产品设计，缩短研发周期。</p>
+              <div class="feature-stats">
+                <div class="stat-item">
+                  <span class="stat-number">多物理场</span>
+                  <span class="stat-label">分析能力</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-number">高精度</span>
+                  <span class="stat-label">求解器</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-number">专业</span>
+                  <span class="stat-label">技术支持</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+            <div class="intro-image">
+              <img src="assets/img/features/features-2.webp" alt="Features" class="img-fluid">
+            </div>
+          </div>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-item" data-aos="flip-up" data-aos-delay="250">
+            <div class="feature-number">01</div>
+            <div class="feature-content">
+              <div class="feature-icon">
+                <i class="bi bi-building"></i>
+              </div>
+              <h4>结构分析</h4>
+              <p>Ansys结构分析软件提供强大的有限元分析能力，可模拟各种结构在不同载荷条件下的响应，帮助工程师优化设计。</p>
+              <div class="feature-tags">
+                <span class="tag">强度分析</span>
+                <span class="tag">模态分析</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-item" data-aos="flip-up" data-aos-delay="300">
+            <div class="feature-number">02</div>
+            <div class="feature-content">
+              <div class="feature-icon">
+                <i class="bi bi-droplet"></i>
+              </div>
+              <h4>流体分析</h4>
+              <p>Ansys流体动力学分析软件可模拟各种流体流动现象，包括湍流、热交换、多相流等，为流体系统设计提供支持。</p>
+              <div class="feature-tags">
+                <span class="tag">CFD</span>
+                <span class="tag">流体仿真</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-item" data-aos="flip-up" data-aos-delay="350">
+            <div class="feature-number">03</div>
+            <div class="feature-content">
+              <div class="feature-icon">
+                <i class="bi bi-thermometer-half"></i>
+              </div>
+              <h4>热分析</h4>
+              <p>Ansys热分析软件可模拟热传导、对流和辐射现象，帮助工程师优化产品的热设计，确保系统在正常温度范围内运行。</p>
+              <div class="feature-tags">
+                <span class="tag">热仿真</span>
+                <span class="tag">温度分布</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-item" data-aos="flip-up" data-aos-delay="400">
+            <div class="feature-number">04</div>
+            <div class="feature-content">
+              <div class="feature-icon">
+                <i class="bi bi-bolt"></i>
+              </div>
+              <h4>电磁分析</h4>
+              <p>Ansys电磁分析软件可模拟电磁场分布、电磁干扰等现象，为电气设备和电子产品设计提供支持。</p>
+              <div class="feature-tags">
+                <span class="tag">电磁场</span>
+                <span class="tag">电磁兼容</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-item" data-aos="flip-up" data-aos-delay="450">
+            <div class="feature-number">05</div>
+            <div class="feature-content">
+              <div class="feature-icon">
+                <i class="bi bi-link"></i>
+              </div>
+              <h4>多物理场耦合</h4>
+              <p>Ansys多物理场耦合分析可模拟不同物理现象之间的相互作用，如结构-热耦合、流固耦合等，提供更真实的仿真结果。</p>
+              <div class="feature-tags">
+                <span class="tag">多物理场</span>
+                <span class="tag">耦合分析</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-item" data-aos="flip-up" data-aos-delay="500">
+            <div class="feature-number">06</div>
+            <div class="feature-content">
+              <div class="feature-icon">
+                <i class="bi bi-bar-chart"></i>
+              </div>
+              <h4>优化设计</h4>
+              <p>Ansys优化设计工具可自动探索设计空间，找到最优设计方案，帮助工程师提高产品性能，降低成本。</p>
+              <div class="feature-tags">
+                <span class="tag">拓扑优化</span>
+                <span class="tag">参数优化</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Features Section -->
+
+    <!-- Features Tabs Section -->
+    <section id="features-tabs" class="features-tabs section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="tabs-wrapper">
+          <ul class="nav nav-tabs" data-aos="fade-up" data-aos-delay="100">
+
+            <li class="nav-item">
+              <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#features-tabs-tab-1">
+                <div class="tab-icon">
+                  <i class="bi bi-building"></i>
+                </div>
+                <div class="tab-content">
+                  <h5>结构分析</h5>
+                  <span>强度与刚度分析</span>
+                </div>
+              </a>
+            </li><!-- End tab nav item -->
+
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tabs-tab-2">
+                <div class="tab-icon">
+                  <i class="bi bi-droplet"></i>
+                </div>
+                <div class="tab-content">
+                  <h5>流体分析</h5>
+                  <span>CFD仿真模拟</span>
+                </div>
+              </a>
+            </li><!-- End tab nav item -->
+
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tabs-tab-3">
+                <div class="tab-icon">
+                  <i class="bi bi-thermometer-half"></i>
+                </div>
+                <div class="tab-content">
+                  <h5>热分析</h5>
+                  <span>温度分布与热传导</span>
+                </div>
+              </a>
+            </li><!-- End tab nav item -->
+
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tabs-tab-4">
+                <div class="tab-icon">
+                  <i class="bi bi-bolt"></i>
+                </div>
+                <div class="tab-content">
+                  <h5>电磁分析</h5>
+                  <span>电磁场与电磁兼容</span>
+                </div>
+              </a>
+            </li><!-- End tab nav item -->
+
+          </ul>
+
+          <div class="tab-content" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="tab-pane fade active show" id="features-tabs-tab-1">
+              <div class="row align-items-center">
+
+                <div class="col-lg-5">
+                  <div class="content-wrapper">
+                    <div class="icon-badge">
+                      <i class="bi bi-building"></i>
+                    </div>
+                    <h3>结构分析解决方案</h3>
+                    <p>Ansys结构分析软件提供强大的有限元分析能力，可模拟各种结构在不同载荷条件下的响应，帮助工程师优化设计，提高产品安全性和可靠性。</p>
+
+                    <div class="feature-grid">
+                      <div class="feature-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>静力学分析 - 计算结构在静态载荷下的应力和变形</span>
+                      </div>
+                      <div class="feature-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>动力学分析 - 模拟结构在动态载荷下的响应</span>
+                      </div>
+                      <div class="feature-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>模态分析 - 计算结构的固有频率和振型</span>
+                      </div>
+                      <div class="feature-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>疲劳分析 - 预测结构在循环载荷下的寿命</span>
+                      </div>
+                    </div>
+
+                    <div class="stats-row">
+                      <div class="stat-item">
+                        <div class="stat-number">高精度</div>
+                        <div class="stat-label">求解器</div>
+                      </div>
+                      <div class="stat-item">
+                        <div class="stat-number">复杂模型</div>
+                        <div class="stat-label">支持</div>
+                      </div>
+                      <div class="stat-item">
+                        <div class="stat-number">快速</div>
+                        <div class="stat-label">分析速度</div>
+                      </div>
+                    </div>
+
+                    <a href="#" class="btn-primary">了解更多 <i class="bi bi-arrow-right"></i></a>
+                  </div>
+                </div>
+
+                <div class="col-lg-7">
+                  <div class="visual-content">
+                    <div class="main-image">
+                      <img src="assets/img/features/features-4.webp" alt="结构分析" class="img-fluid">
+                      <div class="floating-card">
+                        <i class="bi bi-graph-up-arrow"></i>
+                        <div class="card-content">
+                          <span>结构分析</span>
+                          <strong>精准可靠</strong>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div><!-- End tab content item -->
+
+            <div class="tab-pane fade" id="features-tabs-tab-2">
+              <div class="row align-items-center">
+
+                <div class="col-lg-5">
+                  <div class="content-wrapper">
+                    <div class="icon-badge">
+                      <i class="bi bi-droplet"></i>
+                    </div>
+                    <h3>流体分析解决方案</h3>
+                    <p>Ansys流体动力学分析软件可模拟各种流体流动现象，包括湍流、热交换、多相流等，为流体系统设计提供支持，优化产品性能。</p>
+
+                    <div class="feature-grid">
+                      <div class="feature-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>CFD分析 - 模拟流体流动和热传递</span>
+                      </div>
+                      <div class="feature-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>多相流分析 - 模拟气液固多相流动</span>
+                      </div>
+                      <div class="feature-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>燃烧分析 - 模拟燃烧过程和污染物排放</span>
+                      </div>
+                      <div class="feature-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>旋转机械分析 - 模拟泵、风机等旋转设备</span>
+                      </div>
+                    </div>
+
+                    <div class="stats-row">
+                      <div class="stat-item">
+                        <div class="stat-number">复杂流动</div>
+                        <div class="stat-label">模拟</div>
+                      </div>
+                      <div class="stat-item">
+                        <div class="stat-number">高精度</div>
+                        <div class="stat-label">湍流模型</div>
+                      </div>
+                      <div class="stat-item">
+                        <div class="stat-number">高效</div>
+                        <div class="stat-label">求解器</div>
+                      </div>
+                    </div>
+
+                    <a href="#" class="btn-primary">了解更多 <i class="bi bi-arrow-right"></i></a>
+                  </div>
+                </div>
+
+                <div class="col-lg-7">
+                  <div class="visual-content">
+                    <div class="main-image">
+                      <img src="assets/img/features/features-2.webp" alt="流体分析" class="img-fluid">
+                      <div class="floating-card">
+                        <i class="bi bi-shield-check"></i>
+                        <div class="card-content">
+                          <span>流体分析</span>
+                          <strong>精准模拟</strong>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div><!-- End tab content item -->
+
+            <div class="tab-pane fade" id="features-tabs-tab-3">
+              <div class="row align-items-center">
+
+                <div class="col-lg-5">
+                  <div class="content-wrapper">
+                    <div class="icon-badge">
+                      <i class="bi bi-thermometer-half"></i>
+                    </div>
+                    <h3>热分析解决方案</h3>
+                    <p>Ansys热分析软件可模拟热传导、对流和辐射现象，帮助工程师优化产品的热设计，确保系统在正常温度范围内运行，提高产品可靠性。</p>
+
+                    <div class="feature-grid">
+                      <div class="feature-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>稳态热分析 - 计算稳定状态下的温度分布</span>
+                      </div>
+                      <div class="feature-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>瞬态热分析 - 模拟温度随时间的变化</span>
+                      </div>
+                      <div class="feature-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>热应力分析 - 计算温度变化引起的应力</span>
+                      </div>
+                      <div class="feature-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>辐射换热分析 - 模拟热辐射传递</span>
+                      </div>
+                    </div>
+
+                    <div class="stats-row">
+                      <div class="stat-item">
+                        <div class="stat-number">精确</div>
+                        <div class="stat-label">温度预测</div>
+                      </div>
+                      <div class="stat-item">
+                        <div class="stat-number">复杂</div>
+                        <div class="stat-label">热边界条件</div>
+                      </div>
+                      <div class="stat-item">
+                        <div class="stat-number">高效</div>
+                        <div class="stat-label">求解速度</div>
+                      </div>
+                    </div>
+
+                    <a href="#" class="btn-primary">了解更多 <i class="bi bi-arrow-right"></i></a>
+                  </div>
+                </div>
+
+                <div class="col-lg-7">
+                  <div class="visual-content">
+                    <div class="main-image">
+                      <img src="assets/img/features/features-6.webp" alt="热分析" class="img-fluid">
+                      <div class="floating-card">
+                        <i class="bi bi-speedometer2"></i>
+                        <div class="card-content">
+                          <span>热分析</span>
+                          <strong>精准预测</strong>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div><!-- End tab content item -->
+
+            <div class="tab-pane fade" id="features-tabs-tab-4">
+              <div class="row align-items-center">
+
+                <div class="col-lg-5">
+                  <div class="content-wrapper">
+                    <div class="icon-badge">
+                      <i class="bi bi-bolt"></i>
+                    </div>
+                    <h3>电磁分析解决方案</h3>
+                    <p>Ansys电磁分析软件可模拟电磁场分布、电磁干扰等现象，为电气设备和电子产品设计提供支持，确保产品符合电磁兼容要求。</p>
+
+                    <div class="feature-grid">
+                      <div class="feature-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>静电磁场分析 - 模拟静电场和静磁场</span>
+                      </div>
+                      <div class="feature-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>时变电磁场分析 - 模拟交变电磁场</span>
+                      </div>
+                      <div class="feature-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>电磁兼容分析 - 评估电磁干扰和敏感度</span>
+                      </div>
+                      <div class="feature-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>高频电磁场分析 - 模拟微波和射频设备</span>
+                      </div>
+                    </div>
+
+                    <div class="stats-row">
+                      <div class="stat-item">
+                        <div class="stat-number">全频段</div>
+                        <div class="stat-label">覆盖</div>
+                      </div>
+                      <div class="stat-item">
+                        <div class="stat-number">高精度</div>
+                        <div class="stat-label">求解器</div>
+                      </div>
+                      <div class="stat-item">
+                        <div class="stat-number">EMC</div>
+                        <div class="stat-label">合规性</div>
+                      </div>
+                    </div>
+
+                    <a href="#" class="btn-primary">了解更多 <i class="bi bi-arrow-right"></i></a>
+                  </div>
+                </div>
+
+                <div class="col-lg-7">
+                  <div class="visual-content">
+                    <div class="main-image">
+                      <img src="assets/img/features/features-1.webp" alt="电磁分析" class="img-fluid">
+                      <div class="floating-card">
+                        <i class="bi bi-headset"></i>
+                        <div class="card-content">
+                          <span>电磁分析</span>
+                          <strong>全面解决方案</strong>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div><!-- End tab content item -->
+
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Features Tabs Section -->
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>服务项目</h2>
+        <p>提供全方位的Ansys软件服务，满足您的工程仿真需求</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="intro-content" data-aos="fade-right" data-aos-delay="100">
+              <div class="section-badge mb-3" data-aos="zoom-in" data-aos-delay="50">
+                <i class="bi bi-star-fill"></i>
+                <span>我们的服务</span>
+              </div>
+              <h2 class="section-heading mb-4">专业Ansys软件服务</h2>
+              <p class="section-description mb-4">KINGTU提供全方位的Ansys软件服务，包括软件销售、技术支持、培训和定制化解决方案，帮助企业充分发挥Ansys软件的价值。</p>
+              <a href="#" class="cta-button" data-aos="fade-right" data-aos-delay="200">
+                了解服务详情
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="hero-visual" data-aos="fade-left" data-aos-delay="150">
+              <img src="assets/img/services/services-1.webp" alt="Services" class="img-fluid">
+            </div>
+          </div>
+        </div>
+
+        <div class="services-grid mt-5">
+          <div class="row g-4">
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+              <div class="service-card">
+                <div class="card-number">
+                  <span>01</span>
+                </div>
+                <div class="card-content">
+                  <h5 class="service-title">
+                    <a href="#">Ansys软件销售</a>
+                  </h5>
+                  <p class="service-description">提供Ansys全系列软件的销售服务，包括结构、流体、热、电磁等多个模块，满足不同行业的工程仿真需求。</p>
+                </div>
+              </div>
+            </div><!-- End Service Card -->
+
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+              <div class="service-card">
+                <div class="card-number">
+                  <span>02</span>
+                </div>
+                <div class="card-content">
+                  <h5 class="service-title">
+                    <a href="#">技术支持服务</a>
+                  </h5>
+                  <p class="service-description">提供专业的Ansys软件技术支持，包括软件安装、使用指导、问题解决等，确保软件正常运行。</p>
+                </div>
+              </div>
+            </div><!-- End Service Card -->
+
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+              <div class="service-card">
+                <div class="card-number">
+                  <span>03</span>
+                </div>
+                <div class="card-content">
+                  <h5 class="service-title">
+                    <a href="#">培训服务</a>
+                  </h5>
+                  <p class="service-description">提供Ansys软件培训课程，包括基础培训、高级培训和定制化培训，帮助工程师快速掌握软件使用技能。</p>
+                </div>
+              </div>
+            </div><!-- End Service Card -->
+
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+              <div class="service-card">
+                <div class="card-number">
+                  <span>04</span>
+                </div>
+                <div class="card-content">
+                  <h5 class="service-title">
+                    <a href="#">仿真咨询服务</a>
+                  </h5>
+                  <p class="service-description">提供专业的工程仿真咨询服务，帮助企业解决复杂的工程问题，优化产品设计，提高产品性能。</p>
+                </div>
+              </div>
+            </div><!-- End Service Card -->
+
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+              <div class="service-card">
+                <div class="card-number">
+                  <span>05</span>
+                </div>
+                <div class="card-content">
+                  <h5 class="service-title">
+                    <a href="#">定制化解决方案</a>
+                  </h5>
+                  <p class="service-description">根据企业的具体需求，提供定制化的Ansys软件解决方案，包括二次开发、流程优化等。</p>
+                </div>
+              </div>
+            </div><!-- End Service Card -->
+
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+              <div class="service-card">
+                <div class="card-number">
+                  <span>06</span>
+                </div>
+                <div class="card-content">
+                  <h5 class="service-title">
+                    <a href="#">软件维护与升级</a>
+                  </h5>
+                  <p class="service-description">提供Ansys软件的维护与升级服务，确保软件始终保持最新版本，获得最新功能和技术支持。</p>
+                </div>
+              </div>
+            </div><!-- End Service Card -->
+
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Services Section -->
+
+    <!-- Call To Action Section -->
+    <section id="call-to-action" class="call-to-action section light-background">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="advertise-1 d-flex flex-column flex-lg-row gap-4 align-items-center position-relative">
+
+          <div class="content-left flex-grow-1" data-aos="fade-right" data-aos-delay="200">
+            <span class="badge text-uppercase mb-2">立即咨询</span>
+            <h2>专业Ansys软件服务，助力工程创新</h2>
+            <p class="my-4">KINGTU提供全方位的Ansys软件服务，帮助企业解决复杂的工程问题，优化产品设计，提高研发效率，降低成本。</p>
+
+            <div class="features d-flex flex-wrap gap-3 mb-4">
+              <div class="feature-item">
+                <i class="bi bi-check-circle-fill"></i>
+                <span>专业技术支持</span>
+              </div>
+              <div class="feature-item">
+                <i class="bi bi-check-circle-fill"></i>
+                <span>定制化解决方案</span>
+              </div>
+              <div class="feature-item">
+                <i class="bi bi-check-circle-fill"></i>
+                <span>全方位培训服务</span>
+              </div>
+            </div>
+
+            <div class="cta-buttons d-flex flex-wrap gap-3">
+              <a href="#" class="btn btn-primary">免费咨询</a>
+              <a href="#" class="btn btn-outline">了解更多</a>
+            </div>
+          </div>
+
+          <div class="content-right position-relative" data-aos="fade-left" data-aos-delay="300">
+            <img src="assets/img/misc/misc-5.webp" alt="Digital Platform" class="img-fluid rounded-4">
+            <div class="floating-card">
+              <div class="card-icon">
+                <i class="bi bi-graph-up-arrow"></i>
+              </div>
+              <div class="card-content">
+                <span class="stats-number">245%</span>
+                <span class="stats-text">Growth Rate</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="decoration">
+            <div class="circle-1"></div>
+            <div class="circle-2"></div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Call To Action Section -->
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>客户评价</h2>
+        <p>来自客户的真实反馈，见证我们的专业服务</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="testimonial-slider swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 4000
+              },
+              "slidesPerView": 1,
+              "spaceBetween": 30,
+              "navigation": {
+                "nextEl": ".swiper-button-next",
+                "prevEl": ".swiper-button-prev"
+              },
+              "breakpoints": {
+                "768": {
+                  "slidesPerView": 2
+                },
+                "1200": {
+                  "slidesPerView": 3
+                }
+              }
+            }
+          </script>
+
+          <div class="swiper-wrapper">
+
+            <!-- Testimonial Slide 1 -->
+            <div class="swiper-slide">
+              <div class="testimonial-item" data-aos="zoom-in" data-aos-delay="200">
+                <div class="testimonial-header">
+                  <img src="assets/img/person/person-f-12.webp" alt="Client" class="img-fluid" loading="lazy">
+                  <div class="rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                </div>
+                <div class="testimonial-body">
+                  <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit sed eiusmod tempor.</p>
+                </div>
+                <div class="testimonial-footer">
+                  <h5>Jessica Martinez</h5>
+                  <span>UX Designer</span>
+                  <div class="quote-icon">
+                    <i class="bi bi-chat-quote-fill"></i>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Testimonial Slide -->
+
+            <!-- Testimonial Slide 2 -->
+            <div class="swiper-slide">
+              <div class="testimonial-item" data-aos="zoom-in" data-aos-delay="300">
+                <div class="testimonial-header">
+                  <img src="assets/img/person/person-m-8.webp" alt="Client" class="img-fluid" loading="lazy">
+                  <div class="rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                </div>
+                <div class="testimonial-body">
+                  <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat non proident sunt in culpa.</p>
+                </div>
+                <div class="testimonial-footer">
+                  <h5>David Rodriguez</h5>
+                  <span>Software Engineer</span>
+                  <div class="quote-icon">
+                    <i class="bi bi-chat-quote-fill"></i>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Testimonial Slide -->
+
+            <!-- Testimonial Slide 3 -->
+            <div class="swiper-slide">
+              <div class="testimonial-item" data-aos="zoom-in" data-aos-delay="400">
+                <div class="testimonial-header">
+                  <img src="assets/img/person/person-f-6.webp" alt="Client" class="img-fluid" loading="lazy">
+                  <div class="rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                </div>
+                <div class="testimonial-body">
+                  <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud.</p>
+                </div>
+                <div class="testimonial-footer">
+                  <h5>Amanda Wilson</h5>
+                  <span>Creative Director</span>
+                  <div class="quote-icon">
+                    <i class="bi bi-chat-quote-fill"></i>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Testimonial Slide -->
+
+            <!-- Testimonial Slide 4 -->
+            <div class="swiper-slide">
+              <div class="testimonial-item" data-aos="zoom-in" data-aos-delay="500">
+                <div class="testimonial-header">
+                  <img src="assets/img/person/person-m-12.webp" alt="Client" class="img-fluid" loading="lazy">
+                  <div class="rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                </div>
+                <div class="testimonial-body">
+                  <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam eaque ipsa quae ab illo inventore veritatis.</p>
+                </div>
+                <div class="testimonial-footer">
+                  <h5>Ryan Thompson</h5>
+                  <span>Business Analyst</span>
+                  <div class="quote-icon">
+                    <i class="bi bi-chat-quote-fill"></i>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Testimonial Slide -->
+
+            <!-- Testimonial Slide 5 -->
+            <div class="swiper-slide">
+              <div class="testimonial-item" data-aos="zoom-in" data-aos-delay="600">
+                <div class="testimonial-header">
+                  <img src="assets/img/person/person-f-10.webp" alt="Client" class="img-fluid" loading="lazy">
+                  <div class="rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                </div>
+                <div class="testimonial-body">
+                  <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi.</p>
+                </div>
+                <div class="testimonial-footer">
+                  <h5>Rachel Chen</h5>
+                  <span>Project Manager</span>
+                  <div class="quote-icon">
+                    <i class="bi bi-chat-quote-fill"></i>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Testimonial Slide -->
+
+          </div>
+
+          <div class="swiper-navigation">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Testimonials Section -->
+
+    <!-- Stats Section -->
+    <section id="stats" class="stats section light-background">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row align-items-center">
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="avatars d-flex align-items-center">
+              <img src="assets/img/person/person-m-2.webp" alt="Avatar 1" class="rounded-circle" loading="lazy">
+              <img src="assets/img/person/person-m-3.webp" alt="Avatar 2" class="rounded-circle" loading="lazy">
+              <img src="assets/img/person/person-f-5.webp" alt="Avatar 3" class="rounded-circle" loading="lazy">
+              <img src="assets/img/person/person-m-5.webp" alt="Avatar 4" class="rounded-circle" loading="lazy">
+            </div>
+          </div>
+
+          <div class="col-lg-8">
+            <div class="row counters">
+              <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                <h2><span data-purecounter-start="0" data-purecounter-end="185" data-purecounter-duration="1" class="purecounter"></span>+</h2>
+                <p>Nemo enim ipsam</p>
+              </div>
+
+              <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+                <h2><span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1" class="purecounter"></span>K</h2>
+                <p>Voluptatem sequi</p>
+              </div>
+
+              <div class="col-md-4" data-aos="fade-up" data-aos-delay="500">
+                <h2><span data-purecounter-start="0" data-purecounter-end="128" data-purecounter-duration="1" class="purecounter"></span>+</h2>
+                <p>Dolor sit consectetur</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /Stats Section -->
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Pricing</h2>
+        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+          <!-- Basic Plan -->
+          <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+            <div class="pricing-card">
+              <div class="plan-header">
+                <div class="plan-icon">
+                  <i class="bi bi-box"></i>
+                </div>
+                <h3>Starter</h3>
+                <p>For individuals just getting started</p>
+              </div>
+              <div class="plan-pricing">
+                <div class="price">
+                  <span class="currency">$</span>
+                  <span class="amount">12</span>
+                  <span class="period">/month</span>
+                </div>
+              </div>
+              <div class="plan-features">
+                <ul>
+                  <li><i class="bi bi-check-circle-fill"></i> Nullam accumsan lorem</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Vestibulum auctor dapibus</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Nulla consequat massa</li>
+                  <li class="disabled"><i class="bi bi-x-circle-fill"></i> In enim justo rhoncus ut</li>
+                  <li class="disabled"><i class="bi bi-x-circle-fill"></i> Curabitur ullamcorper ultricies</li>
+                </ul>
+              </div>
+              <div class="plan-cta">
+                <a href="#" class="btn-plan">Choose Plan</a>
+              </div>
+            </div>
+          </div><!-- End Basic Plan -->
+
+          <!-- Professional Plan -->
+          <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+            <div class="pricing-card popular">
+              <div class="popular-tag">Most Popular</div>
+              <div class="plan-header">
+                <div class="plan-icon">
+                  <i class="bi bi-briefcase"></i>
+                </div>
+                <h3>Professional</h3>
+                <p>For small teams and growing businesses</p>
+              </div>
+              <div class="plan-pricing">
+                <div class="price">
+                  <span class="currency">$</span>
+                  <span class="amount">39</span>
+                  <span class="period">/month</span>
+                </div>
+              </div>
+              <div class="plan-features">
+                <ul>
+                  <li><i class="bi bi-check-circle-fill"></i> Donec quam felis ultricies</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Nam eget dui etiam rhoncus</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Maecenas tempus tellus</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Donec pede justo fringilla</li>
+                  <li class="disabled"><i class="bi bi-x-circle-fill"></i> Cras dapibus vivamus</li>
+                </ul>
+              </div>
+              <div class="plan-cta">
+                <a href="#" class="btn-plan">Choose Plan</a>
+              </div>
+            </div>
+          </div><!-- End Professional Plan -->
+
+          <!-- Enterprise Plan -->
+          <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="400">
+            <div class="pricing-card">
+              <div class="plan-header">
+                <div class="plan-icon">
+                  <i class="bi bi-building"></i>
+                </div>
+                <h3>Enterprise</h3>
+                <p>For large organizations and corporations</p>
+              </div>
+              <div class="plan-pricing">
+                <div class="price">
+                  <span class="currency">$</span>
+                  <span class="amount">79</span>
+                  <span class="period">/month</span>
+                </div>
+              </div>
+              <div class="plan-features">
+                <ul>
+                  <li><i class="bi bi-check-circle-fill"></i> Etiam sit amet orci eget</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Pellentesque posuere vulputate</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Quisque rutrum aenean</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Fusce vulputate eleifend</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Phasellus viverra nulla</li>
+                </ul>
+              </div>
+              <div class="plan-cta">
+                <a href="#" class="btn-plan">Choose Plan</a>
+              </div>
+            </div>
+          </div><!-- End Enterprise Plan -->
+        </div>
+
+      </div>
+
+    </section><!-- /Pricing Section -->
+
+    <!-- Faq Section -->
+    <section id="faq" class="faq section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4 justify-content-between">
+          <div class="col-lg-8">
+
+            <div class="faq-list">
+              <div class="faq-item faq-active" data-aos="fade-up" data-aos-delay="100">
+                <h3>Vivamus suscipit tortor eget felis porttitor volutpat?</h3>
+                <div class="faq-content">
+                  <p>
+                    Nulla quis lorem ut libero malesuada feugiat. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Curabitur aliquet quam id dui posuere blandit. Nulla porttitor accumsan tincidunt.
+                  </p>
+                </div>
+                <i class="bi bi-plus faq-toggle"></i>
+              </div><!-- End FAQ Item-->
+
+              <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                <h3>Curabitur aliquet quam id dui posuere blandit?</h3>
+                <div class="faq-content">
+                  <p>
+                    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Proin eget tortor risus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar.
+                  </p>
+                </div>
+                <i class="bi bi-plus faq-toggle"></i>
+              </div><!-- End FAQ Item-->
+
+              <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                <h3>Sed porttitor lectus nibh ullamcorper sit amet?</h3>
+                <div class="faq-content">
+                  <p>
+                    Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Donec sollicitudin molestie malesuada. Vestibulum ac diam sit amet quam vehicula elementum.
+                  </p>
+                </div>
+                <i class="bi bi-plus faq-toggle"></i>
+              </div><!-- End FAQ Item-->
+
+              <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+                <h3>Nulla quis lorem ut libero malesuada feugiat?</h3>
+                <div class="faq-content">
+                  <p>
+                    Donec sollicitudin molestie malesuada. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel.
+                  </p>
+                </div>
+                <i class="bi bi-plus faq-toggle"></i>
+              </div><!-- End FAQ Item-->
+
+              <div class="faq-item" data-aos="fade-up" data-aos-delay="500">
+                <h3>Vestibulum ac diam sit amet quam vehicula elementum?</h3>
+                <div class="faq-content">
+                  <p>
+                    Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.
+                  </p>
+                </div>
+                <i class="bi bi-plus faq-toggle"></i>
+              </div><!-- End FAQ Item-->
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="faq-card">
+              <i class="bi bi-chat-dots-fill"></i>
+              <h3>Can't find answer to your question?</h3>
+              <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Curabitur aliquet quam id dui posuere blandit. Nulla quis lorem ut libero malesuada feugiat.</p>
+              <a href="#" class="btn btn-primary">Contact Us</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Faq Section -->
+
+    <!-- Team Section -->
+    <section id="team" class="team section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="team-header" data-aos="fade-up" data-aos-delay="200">
+          <div class="row align-items-center">
+            <div class="col-lg-6">
+              <h2>Our Professional Team</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus luctus nec ullamcorper mattis pulvinar dapibus leo.</p>
+            </div>
+            <div class="col-lg-6 d-flex justify-content-lg-end">
+              <div class="team-controls">
+                <button class="team-control-btn team-prev"><i class="bi bi-chevron-left"></i></button>
+                <button class="team-control-btn team-next"><i class="bi bi-chevron-right"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="team-slider swiper init-swiper" data-aos="fade-up" data-aos-delay="300">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 700,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": 1,
+              "spaceBetween": 30,
+              "navigation": {
+                "nextEl": ".team-next",
+                "prevEl": ".team-prev"
+              },
+              "breakpoints": {
+                "576": {
+                  "slidesPerView": 2,
+                  "spaceBetween": 20
+                },
+                "992": {
+                  "slidesPerView": 3,
+                  "spaceBetween": 30
+                },
+                "1200": {
+                  "slidesPerView": 4,
+                  "spaceBetween": 30
+                }
+              }
+            }
+          </script>
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="team-member">
+                <div class="member-image">
+                  <img src="assets/img/person/person-m-3.webp" class="img-fluid" alt="" loading="lazy">
+                  <div class="member-social">
+                    <a href="#"><i class="bi bi-twitter-x"></i></a>
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                    <a href="#"><i class="bi bi-linkedin"></i></a>
+                  </div>
+                </div>
+                <div class="member-content">
+                  <h3>Marcus Wilson</h3>
+                  <span>Chief Technology Officer</span>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec.</p>
+                </div>
+              </div>
+            </div><!-- End slide item -->
+
+            <div class="swiper-slide">
+              <div class="team-member">
+                <div class="member-image">
+                  <img src="assets/img/person/person-f-5.webp" class="img-fluid" alt="" loading="lazy">
+                  <div class="member-social">
+                    <a href="#"><i class="bi bi-twitter-x"></i></a>
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                    <a href="#"><i class="bi bi-linkedin"></i></a>
+                  </div>
+                </div>
+                <div class="member-content">
+                  <h3>Sophia Reynolds</h3>
+                  <span>Product Designer</span>
+                  <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</p>
+                </div>
+              </div>
+            </div><!-- End slide item -->
+
+            <div class="swiper-slide">
+              <div class="team-member">
+                <div class="member-image">
+                  <img src="assets/img/person/person-m-8.webp" class="img-fluid" alt="" loading="lazy">
+                  <div class="member-social">
+                    <a href="#"><i class="bi bi-twitter-x"></i></a>
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                    <a href="#"><i class="bi bi-linkedin"></i></a>
+                  </div>
+                </div>
+                <div class="member-content">
+                  <h3>Daniel Chen</h3>
+                  <span>Marketing Specialist</span>
+                  <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.</p>
+                </div>
+              </div>
+            </div><!-- End slide item -->
+
+            <div class="swiper-slide">
+              <div class="team-member">
+                <div class="member-image">
+                  <img src="assets/img/person/person-f-9.webp" class="img-fluid" alt="" loading="lazy">
+                  <div class="member-social">
+                    <a href="#"><i class="bi bi-twitter-x"></i></a>
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                    <a href="#"><i class="bi bi-linkedin"></i></a>
+                  </div>
+                </div>
+                <div class="member-content">
+                  <h3>Olivia Thompson</h3>
+                  <span>Lead Developer</span>
+                  <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.</p>
+                </div>
+              </div>
+            </div><!-- End slide item -->
+
+            <div class="swiper-slide">
+              <div class="team-member">
+                <div class="member-image">
+                  <img src="assets/img/person/person-m-12.webp" class="img-fluid" alt="" loading="lazy">
+                  <div class="member-social">
+                    <a href="#"><i class="bi bi-twitter-x"></i></a>
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                    <a href="#"><i class="bi bi-linkedin"></i></a>
+                  </div>
+                </div>
+                <div class="member-content">
+                  <h3>Jason Parker</h3>
+                  <span>UI/UX Designer</span>
+                  <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia.</p>
+                </div>
+              </div>
+            </div><!-- End slide item -->
+
+            <div class="swiper-slide">
+              <div class="team-member">
+                <div class="member-image">
+                  <img src="assets/img/person/person-f-7.webp" class="img-fluid" alt="" loading="lazy">
+                  <div class="member-social">
+                    <a href="#"><i class="bi bi-twitter-x"></i></a>
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                    <a href="#"><i class="bi bi-linkedin"></i></a>
+                  </div>
+                </div>
+                <div class="member-content">
+                  <h3>Emily Rodriguez</h3>
+                  <span>Project Manager</span>
+                  <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium.</p>
+                </div>
+              </div>
+            </div><!-- End slide item -->
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- /Team Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>联系我们</h2>
+        <p>如有任何问题或需求，欢迎随时联系我们</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row">
+          <div class="col-lg-6 mb-5" data-aos="fade-right" data-aos-delay="200">
+            <div class="contact-info-section">
+              <div class="info-header">
+                <h3>联系我们</h3>
+                <p>如有任何问题或需求，欢迎随时联系我们，我们将竭诚为您服务。</p>
+              </div>
+
+              <div class="contact-info-grid">
+                <div class="info-item" data-aos="zoom-in" data-aos-delay="250">
+                  <div class="info-icon">
+                    <i class="bi bi-geo-alt-fill"></i>
+                  </div>
+                  <div class="info-content">
+                    <h5>公司地址</h5>
+                    <p>北京市海淀区中关村科技园区</p>
+                  </div>
+                </div>
+
+                <div class="info-item" data-aos="zoom-in" data-aos-delay="300">
+                  <div class="info-icon">
+                    <i class="bi bi-envelope-fill"></i>
+                  </div>
+                  <div class="info-content">
+                    <h5>电子邮箱</h5>
+                    <p>info@kingtu.com</p>
+                  </div>
+                </div>
+
+                <div class="info-item" data-aos="zoom-in" data-aos-delay="350">
+                  <div class="info-icon">
+                    <i class="bi bi-telephone-fill"></i>
+                  </div>
+                  <div class="info-content">
+                    <h5>联系电话</h5>
+                    <p>400-123-4567</p>
+                  </div>
+                </div>
+
+                <div class="info-item" data-aos="zoom-in" data-aos-delay="400">
+                  <div class="info-icon">
+                    <i class="bi bi-clock-fill"></i>
+                  </div>
+                  <div class="info-content">
+                    <h5>工作时间</h5>
+                    <p>周一至周五: 9:00 - 18:00</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="social-contact" data-aos="fade-up" data-aos-delay="450">
+                <h5>关注我们</h5>
+                <div class="social-icons">
+                  <a href="#" class="social-icon"><i class="bi bi-weixin"></i></a>
+                  <a href="#" class="social-icon"><i class="bi bi-weibo"></i></a>
+                  <a href="#" class="social-icon"><i class="bi bi-linkedin"></i></a>
+                  <a href="#" class="social-icon"><i class="bi bi-youtube"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+            <div class="contact-form-wrapper">
+              <div class="form-header">
+                <h3>发送消息</h3>
+                <p>请填写以下表单，我们将尽快回复您。</p>
+              </div>
+
+              <form action="forms/contact.php" method="post" class="php-email-form">
+                <div class="mb-3">
+                  <label for="contactName" class="form-label">姓名</label>
+                  <input type="text" name="name" class="form-control" id="contactName" placeholder="请输入您的姓名" required="">
+                </div>
+
+                <div class="mb-3">
+                  <label for="contactEmail" class="form-label">电子邮箱</label>
+                  <input type="email" class="form-control" name="email" id="contactEmail" placeholder="请输入您的电子邮箱" required="">
+                </div>
+
+                <div class="mb-3">
+                  <label for="contactPhone" class="form-label">联系电话</label>
+                  <input type="tel" class="form-control" name="phone" id="contactPhone" placeholder="请输入您的联系电话">
+                </div>
+
+                <div class="mb-3">
+                  <label for="contactSubject" class="form-label">主题</label>
+                  <input type="text" class="form-control" name="subject" id="contactSubject" placeholder="请输入消息主题" required="">
+                </div>
+
+                <div class="mb-4">
+                  <label for="contactMessage" class="form-label">消息内容</label>
+                  <textarea class="form-control message-textarea" name="message" id="contactMessage" rows="5" placeholder="请输入您的消息内容" required=""></textarea>
+                </div>
+
+                <div class="my-3">
+                  <div class="loading">加载中</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">您的消息已发送，谢谢！</div>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                  <span>发送消息</span>
+                  <i class="bi bi-arrow-right"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer light-background">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6 footer-about">
+            <a href="index.html" class="logo d-flex align-items-center">
+              <span class="sitename">KINGTU</span>
+            </a>
+            <div class="footer-contact pt-3">
+              <p>北京市海淀区中关村科技园区</p>
+              <p>邮编：100080</p>
+              <p class="mt-3"><strong>电话:</strong> <span>400-123-4567</span></p>
+              <p><strong>邮箱:</strong> <span>info@kingtu.com</span></p>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>快速链接</h4>
+            <ul>
+              <li><a href="index.html">首页</a></li>
+              <li><a href="index.html#about">关于我们</a></li>
+              <li><a href="index.html#services">服务项目</a></li>
+              <li><a href="#">服务条款</a></li>
+              <li><a href="#">隐私政策</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>服务项目</h4>
+            <ul>
+              <li><a href="#">Ansys软件销售</a></li>
+              <li><a href="#">技术支持服务</a></li>
+              <li><a href="#">培训服务</a></li>
+              <li><a href="#">仿真咨询服务</a></li>
+              <li><a href="#">定制化解决方案</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>解决方案</h4>
+            <ul>
+              <li><a href="#">结构分析</a></li>
+              <li><a href="#">流体分析</a></li>
+              <li><a href="#">热分析</a></li>
+              <li><a href="#">电磁分析</a></li>
+              <li><a href="#">多物理场耦合</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>联系我们</h4>
+            <ul>
+              <li><a href="#">在线咨询</a></li>
+              <li><a href="#">技术支持</a></li>
+              <li><a href="#">加入我们</a></li>
+              <li><a href="#">合作伙伴</a></li>
+              <li><a href="#">常见问题</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="copyright text-center">
+      <div class="container d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between align-items-center">
+
+        <div class="d-flex flex-column align-items-center align-items-lg-start">
+          <div>
+            © Copyright <strong><span>KINGTU</span></strong>. All Rights Reserved
+          </div>
+          <div class="credits">
+            <!-- All the links in the footer should remain intact. -->
+            <!-- You can delete the links only if you purchased the pro version. -->
+            <!-- Licensing information: https://bootstrapmade.com/license/ -->
+            <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/herobiz-bootstrap-business-template/ -->
+            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> | <a href="https://bootstrapmade.com/tools/">DevTools</a>
+          </div>
+        </div>
+
+        <div class="social-links order-first order-lg-last mb-3 mb-lg-0">
+          <a href=""><i class="bi bi-twitter-x"></i></a>
+          <a href=""><i class="bi bi-facebook"></i></a>
+          <a href=""><i class="bi bi-instagram"></i></a>
+          <a href=""><i class="bi bi-linkedin"></i></a>
+        </div>
+
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
 </body>
+
 </html>
