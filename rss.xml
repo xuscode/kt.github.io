@@ -1,17 +1,30 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<rss version="2.0">
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title> KINGTU企业信息</title>
+    <title>KINGTU 企业信息</title>
     <link>https://kt.github.io/</link>
-    <description>KT 技术与服务网站的 RSS 订阅源</description>
+    <description>KT 技术与服务网站的 RSS 订阅源。订阅此源获取最新项目、案例、知识分享更新。</description>
     <language>zh-cn</language>
     <lastBuildDate>Sun, 30 Mar 2026 12:00:00 +0800</lastBuildDate>
+    <atom:link href="https://kt.github.io/rss.xml" rel="self" type="application/rss+xml" />
+
     <item>
       <title>示例文章：欢迎关注我们的 RSS 订阅</title>
       <link>https://kt.github.io/service-details.html</link>
-      <description>这是一个RSS订阅示例，更新后请将新条目写入此文件。</description>
+      <description><![CDATA[这是一个 RSS 订阅示例，更新后请将新条目写入此文件。]]></description>
       <pubDate>Sun, 30 Mar 2026 12:00:00 +0800</pubDate>
-      <guid>https://kt.github.io/service-details.html</guid>
+      <guid isPermaLink="true">https://kt.github.io/service-details.html</guid>
     </item>
+
+    <!-- 推荐写法：
+    <item>
+      <title>每日快讯：XXXXX</title>
+      <link>https://kt.github.io/your-post.html</link>
+      <description><![CDATA[文章摘要或内容]]></description>
+      <pubDate>Mon, 31 Mar 2026 08:00:00 +0800</pubDate>
+      <guid isPermaLink="true">https://kt.github.io/your-post.html</guid>
+    </item>
+    -->
+
   </channel>
 </rss>
