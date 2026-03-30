@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+  <channel>
+    <title>KT 个人网站</title>
+    <link>https://kt.github.io/</link>
+    <description>KT 技术与服务网站的 RSS 订阅源</description>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 30 Mar 2026 12:00:00 +0800</lastBuildDate>
+    <item>
+      <title>示例文章：欢迎关注我们的 RSS 订阅</title>
+      <link>https://kt.github.io/service-details.html</link>
+      <description>这是一个RSS订阅示例，更新后请将新条目写入此文件。</description>
+      <pubDate>Sun, 30 Mar 2026 12:00:00 +0800</pubDate>
+      <guid>https://kt.github.io/service-details.html</guid>
+    </item>
+  </channel>
+</rss>
