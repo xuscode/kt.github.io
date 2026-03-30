@@ -5,7 +5,7 @@
     <link>https://kt.github.io/</link>
     <description>KT 技术与服务网站的 RSS 订阅源。订阅此源获取最新项目、案例、知识分享更新。</description>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 30 Mar 2026 12:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 30 Mar 2026 10:00:00 +0800</lastBuildDate>
     <atom:link href="https://kt.github.io/rss.xml" rel="self" type="application/rss+xml" />
 
     <item>
@@ -32,7 +32,7 @@
       <guid isPermaLink="true">https://kt.github.io/post/2026-03-30-thermal-multiphysics.html</guid>
     </item>
 
-    <!-- 可以继续按日期追加更多条目 -->
+    <!-- 以后每日新增条目，直接追加 <item> -->
 
   </channel>
 </rss>
