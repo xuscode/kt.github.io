@@ -5,12 +5,12 @@
     <link>https://kt.github.io/</link>
     <description>KT 技术与服务网站的 RSS 订阅源。订阅此源获取最新项目、案例、知识分享更新。</description>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 31 Mar 2026 17:04:18 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 31 Mar 2026 17:12:04 +0800</lastBuildDate>
     <atom:link href="https://kt.github.io/rss.xml" rel="self" type="application/rss+xml" />
 
     <!-- 自动生成：请勿手动编辑 -->
     <!-- 由 build_rss.py 脚本从 rss/ 目录合并生成 -->
-    <!-- 最后更新时间: 2026-03-31 17:04:18 -->
+    <!-- 最后更新时间: 2026-03-31 17:12:04 -->
 
     <item>
   <title>2026-03-31：AI优化案例</title>
