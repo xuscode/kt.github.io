@@ -5,12 +5,20 @@
     <link>https://kt.github.io/</link>
     <description>KT 技术与服务网站的 RSS 订阅源。订阅此源获取最新项目、案例、知识分享更新。</description>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 31 Mar 2026 16:54:14 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 31 Mar 2026 16:55:40 +0800</lastBuildDate>
     <atom:link href="https://kt.github.io/rss.xml" rel="self" type="application/rss+xml" />
 
     <!-- 自动生成：请勿手动编辑 -->
     <!-- 由 build_rss.py 脚本从 rss/ 目录合并生成 -->
-    <!-- 最后更新时间: 2026-03-31 16:54:14 -->
+    <!-- 最后更新时间: 2026-03-31 16:55:40 -->
+
+    <item>
+  <title>2026-03-31：AI优化案例</title>
+  <link>https://kt.github.io/post/2026-03-31-ai-optimization.html</link>
+  <description>本次案例通过网格加密与湍流模型调整，实现流量效率提升 8%。</description>
+  <pubDate>Sun, 31 Mar 2026 15:00:00 +0800</pubDate>
+  <guid isPermaLink="true">https://kt.github.io/post/2026-03-31-ai-optimization.html</guid>
+</item>
 
     <item>
   <title>2026-03-30：热分析与耦合多物理场报告</title>
