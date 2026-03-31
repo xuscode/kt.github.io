@@ -1,0 +1,8 @@
+<!-- 流体仿真相关的RSS条目 -->
+<item>
+  <title>2026-03-31：AI优化案例</title>
+  <link>https://kt.github.io/post/2026-03-31-ai-optimization.html</link>
+  <description><![CDATA[【AI优化案例】我们成功应用深度学习算法优化流体仿真流程，通过网格加密与湍流模型调整，实现流量效率提升 8%。本次研究采用卷积神经网络对流体流动进行预测，减少了 40% 的计算时间。实验结果显示，优化后的模型在复杂边界条件下表现更加稳定，为工业流体系统设计提供了新的思路。<br><img src="https://kt.github.io/rss/20260331/demo1.jpeg" alt="AI优化案例图片1" style="max-width: 100%; height: auto;"><br><img src="https://kt.github.io/rss/20260331/demo2.jpeg" alt="AI优化案例图片2" style="max-width: 100%; height: auto;"><br><img src="https://kt.github.io/rss/20260331/demo3.jpeg" alt="AI优化案例图片3" style="max-width: 100%; height: auto;">]]></description>
+  <pubDate>Sun, 31 Mar 2026 15:00:00 +0800</pubDate>
+  <guid isPermaLink="true">https://kt.github.io/post/2026-03-31-ai-optimization.html</guid>
+</item>
