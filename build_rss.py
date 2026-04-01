@@ -193,7 +193,12 @@ def main():
     
     # 添加排序后的item
     for _, item_str in items:
-        rss_content += f"    {item_str.strip()}\n\n"
+        # 确保item元素有正确的缩进和格式
+        item_lines = item_str.strip().split('\n')
+        formatted_item = ''
+        for line in item_lines:
+            formatted_item += f"    {line}\n"
+        rss_content += formatted_item + "\n"
     
     rss_content += RSS_FOOTER
     
