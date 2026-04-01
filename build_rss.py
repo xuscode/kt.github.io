@@ -93,7 +93,8 @@ def parse_markdown(file_path):
     
     link_elem = ET.SubElement(item, 'link')
     # 生成唯一链接
-    link = f"https://kt.github.io/post/{date_str}-{re.sub(r'\s+', '-', title.lower())}.html"
+    # link = f"https://kt.github.io/post/{date_str}-{re.sub(r'\s+', '-', title.lower())}.html"
+    link = f"https://king-tu.com/"
     link_elem.text = link
     
     description_elem = ET.SubElement(item, 'description')
