@@ -97,10 +97,8 @@ def parse_markdown(file_path):
     link_elem.text = link
     
     description_elem = ET.SubElement(item, 'description')
-    # 创建CDATA部分
-    cdata = ET.Element('![CDATA[')
-    cdata.text = html_content
-    description_elem.append(cdata)
+    # 直接设置文本内容，让ElementTree自动处理
+    description_elem.text = html_content
     
     pubdate_elem = ET.SubElement(item, 'pubDate')
     pubdate_elem.text = pubdate_str
