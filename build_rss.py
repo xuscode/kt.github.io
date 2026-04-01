@@ -19,7 +19,8 @@ RSS_HEADER = '''<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>KINGTU 企业信息</title>
-    <link>https://kt.github.io/</link>
+    <!-- <link>https://king-tu.com/</link>-->
+    <link>https://king-tu.com/</link>
     <description>KT 技术与服务网站的 RSS 订阅源。订阅此源获取最新项目、案例、知识分享更新。</description>
     <language>zh-cn</language>
     <lastBuildDate>{last_build_date}</lastBuildDate>

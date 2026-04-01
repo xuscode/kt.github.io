@@ -1,8 +1,0 @@
-<!-- 流体仿真相关的RSS条目 -->
-<item>
-  <title>2026-03-29：流体仿真结果优化案例</title>
-  <link>https://kt.github.io/post/2026-03-29-fluid-simulation.html</link>
-  <description><![CDATA[本次案例通过网格加密与湍流模型调整，实现流量效率提升 8%。]]></description>
-  <pubDate>Sun, 29 Mar 2026 15:00:00 +0800</pubDate>
-  <guid isPermaLink="true">https://kt.github.io/post/2026-03-29-fluid-simulation.html</guid>
-</item>
